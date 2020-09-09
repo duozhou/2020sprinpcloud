@@ -1,7 +1,6 @@
 package cn.zh.springcloud.paymentzk.controller;
 
 import cn.zh.springcloud.entities.CommonResult;
-import com.sun.javafx.binding.StringFormatter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +17,7 @@ public class PaymentZKController {
     @GetMapping("/payment/zk")
     public CommonResult paymentZk() {
         String s = MessageFormat.format("PaymentZKController...paymentZk...{0}", UUID.randomUUID().toString());
-        return new CommonResult(200, "success", s);
+        return new CommonResult<String>(200, "success", s);
     }
 
 }
